@@ -25,7 +25,7 @@ public class TestClass {
 
     @PostMapping("/")
     public String connect(@RequestBody com.mcp.demo.RequestBody requestBody){
-        System.out.println(requestBody.url);
+        System.out.println(requestBody.url); // http://localhost:8081/sse used sse endpoint to connect YAYYYYYY
         WebClient.Builder webClientBuilder = WebClient.builder().baseUrl(requestBody.url);
         McpClientTransport transport = HttpClientSseClientTransport.builder(requestBody.url).build();
 
